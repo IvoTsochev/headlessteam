@@ -4,7 +4,7 @@ import Portfolio from './sections/Portfolio';
 import About from './sections/About';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
-import FloatingChat from './components/FloatingChat';
+// import FloatingChat from './components/FloatingChat';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <FloatingChat />
+      {/* <FloatingChat /> */}
     </div>
   )
 }
