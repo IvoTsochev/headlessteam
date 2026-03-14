@@ -1,30 +1,16 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 
+import bgBusinessCover from '../assets/images/projects/bg-business/bg-business-cover.png';
+
 const projects = [
   {
-    title: "EcoTrack Mobile",
+    title: "БГ Бизнеси",
     category: "iOS / Android",
-    description: "A sustainable lifestyle tracking app helping users monitor their carbon footprint.",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80",
-    tags: ["React Native", "Node.js", "MongoDB"],
-    links: { demo: "#", github: "#" }
-  },
-  {
-    title: "FinFlow",
-    category: "Fintech",
-    description: "Personal finance management dashboard with real-time market data integration.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
-    tags: ["Flutter", "Firebase", "Cloud Functions"],
-    links: { demo: "#", github: "#" }
-  },
-  {
-    title: "HealthConnect",
-    category: "Healthcare",
-    description: "Telemedicine platform connecting patients with specialists for virtual consultations.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
-    tags: ["SwiftUI", "HealthKit", "WebRTC"],
-    links: { demo: "#", github: "#" }
+    description: "Вашият пътеводител към бизнеси и услуги от цяла България. Намерете магазини, заведения, специалисти и още – бързо, лесно и безплатно.",
+    image: bgBusinessCover,
+    tags: ["React Native", "TypeScript", "Nativewind", "Supabase"],
+    links: { demo: "https://troyanskibiznesi.headless.team", github: "" }
   }
 ];
 
@@ -63,8 +49,8 @@ const Portfolio = () => {
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute bottom-4 left-4 z-20">
-                  <span className="text-blue-400 text-sm font-medium mb-1 block">{project.category}</span>
                   <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                  <span className="text-blue-400 text-sm font-medium mb-1 block">{project.category}</span>
                 </div>
               </div>
 
@@ -84,12 +70,17 @@ const Portfolio = () => {
                 <div className="flex items-center gap-4">
                   <a href={project.links.demo} className="flex items-center gap-2 text-sm font-medium text-white hover:text-blue-400 transition-colors">
                     <ExternalLink size={16} />
-                    Live Demo
+                    Website
                   </a>
-                  <a href={project.links.github} className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">
-                    <Github size={16} />
-                    Source Code
-                  </a>
+                  {
+                    project.links.github && (
+                      <a href={project.links.github} className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">
+                      <Github size={16} />
+                      Source Code
+                    </a>
+                    )
+                  }
+             
                 </div>
               </div>
             </motion.div>
