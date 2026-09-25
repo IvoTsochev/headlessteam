@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
+import { contactEmail } from '../data/site';
 
 const Contact = () => {
   return (
@@ -26,7 +27,7 @@ const Contact = () => {
           className="flex justify-center"
         >
           <a
-            href="mailto:ivaylo@headless.team"
+            href={`mailto:${contactEmail}`}
             className="group flex items-center gap-4 px-8 py-6 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 hover:bg-white/[0.07] transition-all max-w-md w-full"
           >
             <div className="p-3 rounded-lg bg-blue-500/10 text-blue-500 group-hover:bg-blue-500/20 transition-colors">
@@ -35,7 +36,7 @@ const Contact = () => {
             <div className="text-left flex-1 min-w-0">
               <h3 className="text-lg font-semibold mb-0.5">Email Me</h3>
               <p className="text-blue-400 group-hover:text-blue-300 transition-colors truncate">
-                ivaylo@headless.team
+                {contactEmail}
               </p>
             </div>
           </a>

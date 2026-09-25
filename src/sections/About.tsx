@@ -1,15 +1,9 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import { capabilities } from '../data/site';
 import headlessteamLogoTransparent from '../assets/images/headlessteam-logo-transparent.png';
 
 const About = () => {
-  const capabilities = [
-    "React Native (iOS & Android)",
-    "React Web Applications",
-    "Node.js & Python Backend",
-    "App Store Optimization"
-  ];
-
   return (
     <section id="about" className="py-20 bg-background relative overflow-hidden">
       {/* Decorative elements */}
@@ -32,8 +26,8 @@ const About = () => {
             </h2>
             <p className="text-gray-400 mb-6 text-lg leading-relaxed">
               Headless Team is a development brand focused on bringing live projects to life. 
-              We build intuitive, high-performance mobile and web apps—turning ideas into products 
-              that stand out in the App Store and on the web.
+              We build fast, modern websites and web applications—turning ideas into products 
+              that help businesses stand out online.
             </p>
             <p className="text-gray-400 mb-8 text-lg leading-relaxed">
               Our approach combines technical excellence with clean, maintainable code, ensuring every 
@@ -70,7 +64,7 @@ const About = () => {
               </div>
             </div>
             
-            {/* Floating stats cards - brand metrics */}
+            {/* Floating stats card */}
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -78,19 +72,8 @@ const About = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="absolute -bottom-6 -left-6 bg-surface border border-white/10 p-6 rounded-xl shadow-xl"
             >
-              <div className="text-3xl font-bold text-blue-500">2+</div>
-              <div className="text-sm text-gray-400">Years Building</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ y: -20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="absolute -top-6 -right-6 bg-surface border border-white/10 p-6 rounded-xl shadow-xl"
-            >
-              <div className="text-3xl font-bold text-violet-500">1</div>
-              <div className="text-sm text-gray-400">Projects Shipped</div>
+              <div className="text-3xl font-bold text-blue-500">4+</div>
+              <div className="text-sm text-gray-400">Years with React</div>
             </motion.div>
           </motion.div>
         </div>

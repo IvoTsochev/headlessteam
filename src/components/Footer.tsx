@@ -1,4 +1,5 @@
 import { Github, Linkedin } from 'lucide-react';
+import { socialLinks } from '../data/site';
 
 const Footer = () => {
   return (
@@ -15,10 +16,10 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="https://github.com/IvoTsochev" target="_blank" className="text-gray-400 hover:text-white transition-colors">
+            <a href={socialLinks.github} target="_blank" className="text-gray-400 hover:text-white transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/ivaylotsochev/" target="_blank" className="text-gray-400 hover:text-white transition-colors">
+            <a href={socialLinks.linkedin} target="_blank" className="text-gray-400 hover:text-white transition-colors">
               <Linkedin size={20} />
             </a>
           </div>

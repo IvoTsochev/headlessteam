@@ -1,18 +1,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 
-import bgBusinessCover from '../assets/images/projects/bg-business/bg-business-cover.png';
-
-const projects = [
-  {
-    title: "БГ Бизнеси",
-    category: "iOS / Android",
-    description: "Вашият пътеводител към бизнеси и услуги от цяла България. Намерете магазини, заведения, специалисти и още – бързо, лесно и безплатно.",
-    image: bgBusinessCover,
-    tags: ["React Native", "TypeScript", "Nativewind", "Supabase"],
-    links: { demo: "https://troyanskibiznesi.headless.team", github: "" }
-  }
-];
+import { projects } from '../data/site';
 
 const Portfolio = () => {
   return (
@@ -27,7 +16,7 @@ const Portfolio = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A selection of mobile applications and digital products I've crafted.
+            A selection of websites and digital products I've built.
           </p>
         </motion.div>
 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Smartphone, Code, Zap } from 'lucide-react';
+import { ArrowRight, Gauge, PencilLine, Code } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -17,9 +17,9 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
           >
-            Building the Future of <br />
+            Websites & Web Apps <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-violet-500">
-              Mobile Experiences
+              Built to Work for You
             </span>
           </motion.h1>
 
@@ -29,8 +29,8 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-gray-400 max-w-2xl mx-auto mb-10"
           >
-            Specializing in high-performance iOS and Android applications. 
-            Turning complex ideas into elegant, user-centric mobile solutions.
+            Custom websites and web applications built with React and TypeScript.
+            Fast, easy to manage, and made to grow with your business.
           </motion.p>
 
           <motion.div
@@ -64,19 +64,19 @@ const Hero = () => {
         >
           {[
             {
-              icon: <Smartphone className="w-6 h-6 text-blue-400" />,
-              title: "Native Performance",
-              description: "Optimized for both iOS and Android platforms ensuring smooth 60fps experiences."
+              icon: <Gauge className="w-6 h-6 text-blue-400" />,
+              title: "Fast on Every Device",
+              description: "Quick-loading pages that look and work great on phones, tablets and desktops."
             },
             {
-              icon: <Code className="w-6 h-6 text-violet-400" />,
+              icon: <PencilLine className="w-6 h-6 text-violet-400" />,
+              title: "Easy to Manage",
+              description: "Update your own content without touching code, powered by a headless CMS like Sanity."
+            },
+            {
+              icon: <Code className="w-6 h-6 text-yellow-400" />,
               title: "Clean Architecture",
               description: "Scalable and maintainable codebases built with modern best practices."
-            },
-            {
-              icon: <Zap className="w-6 h-6 text-yellow-400" />,
-              title: "Rapid Development",
-              description: "Efficient development cycles without compromising on quality or testing."
             }
           ].map((feature, index) => (
             <div key={index} className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-colors">
