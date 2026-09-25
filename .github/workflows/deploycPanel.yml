@@ -24,8 +24,7 @@ jobs:
       - name: Deploy build code
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ftp.headless.team
+          server: ftp.ivaylotsochev.com
           username: gh_actions@headless.team
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist/
-          
